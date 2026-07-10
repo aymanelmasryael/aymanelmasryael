@@ -14,7 +14,19 @@
     <a href="https://github.com/aymanelmasryael">GitHub</a>
   </p>
   <br>
+
+  <a href="https://github.com/aymanelmasryael">
+    <img src="https://komarev.com/ghpvc/?username=aymanelmasryael&label=Profile+Views&color=0074FF&style=flat" alt="Profile Views">
+  </a>
+
+  <br><br>
   <img src="https://github-readme-stats.vercel.app/api?username=aymanelmasryael&show_icons=true&theme=dark&hide_border=true&bg_color=0D1117&title_color=0074FF&icon_color=00FFCC&text_color=FFFFFF" alt="Stats" width="450">
+  <br><br>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aymanelmasryael&layout=compact&theme=dark&hide_border=true&bg_color=0D1117&title_color=0074FF&text_color=FFFFFF" alt="Top Languages" width="400">
+  <br><br>
+  <a href="https://github.com/aymanelmasryael">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=aymanelmasryael&bg_color=0D1117&color=0074FF&line=00FFCC&point=FFFFFF&area=true&hide_border=true" alt="Activity Graph" width="650">
+  </a>
 </div>
 
 ---
