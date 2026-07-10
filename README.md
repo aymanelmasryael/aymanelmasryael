@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/aymanelmasryael/ael-design-system/ael-logo.svg" alt="AEL Digital Studio" width="70">
+  <img src="https://cdn.jsdelivr.net/gh/aymanelmasryael/ael-design-system/ael-logo.svg" alt="AEL Digital Studio" width="90">
   <br><br>
   <h1>Ayman Elmasry</h1>
   <h3><code>Visionary Architect · AI Orchestrator · Brand Designer</code></h3>
