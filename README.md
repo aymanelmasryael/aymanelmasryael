@@ -4,9 +4,9 @@
 
 # Hello! I'm Ayman Elmasry
 
-**Computational Creative Director · AI Orchestrator · Brand Designer**
+**Visionary · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio**
 
-Founder of [AEL Digital Studio](https://www.aymanelmasry.me) — where we build brand identities, AI-powered systems, and digital products.
+Design drives the vision, AI powers the build. I build engines that produce, not just artifacts that sit.
 
 I work at the intersection of artificial intelligence, computational design, and brand strategy — building engines that produce, not just artifacts that sit.
 

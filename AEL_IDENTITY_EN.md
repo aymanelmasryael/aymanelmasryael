@@ -1,5 +1,5 @@
 
-> **AEL Vision Framework v2.2** — © 2026 Ayman Elmasry — AEL Digital Studio
+> **AEL Digital Studio™** — © 2026 Ayman Elmasry — AEL Digital Studio
 > All rights reserved under AEL Prompt IP System v1.0
 
 ---
@@ -8,11 +8,11 @@
   <img src="https://raw.githubusercontent.com/aymanelmasryael/aymanelmasryael/main/ael-logo.svg" alt="AEL Digital Studio" width="120">
   <br><br>
   <strong>Ayman Elmasry</strong><br>
-  <em>Visionary Architect · AI Orchestrator · Brand Designer</em><br>
+  <em>Visionary · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio</em><br>
   <em>مهندس رؤية · مخرج ذكاء اصطناعي · مصمم هويات</em>
   <br><br>
   <a href="https://www.aymanelmasry.com">www.aymanelmasry.com</a> ·
-  <a href="mailto:info@aymanelmasry.com">info@aymanelmasry.com</a><br>
+  <a href="mailto:ayman@aymanelmasry.me">ayman@aymanelmasry.me</a><br>
   <a href="https://github.com/aymanelmasryael">GitHub</a> ·
   <a href="https://linkedin.com/in/aymanelmasryael">LinkedIn</a> ·
   <a href="https://x.com/aymanelmasryael">X</a> ·
@@ -28,11 +28,11 @@
 |-------|-------|
 | **Full Name** | Ayman Elmasry |
 | **Studio** | AEL Digital Studio |
-| **Title (EN)** | Visionary Architect · AI Orchestrator · Brand Designer |
+| **Title (EN)** | Visionary · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio |
 | **Title (AR)** | مهندس رؤية · مخرج ذكاء اصطناعي · مصمم هويات |
 | **Legal Entities** | Ayman Elmasry LLC (UAE), Ayman Elmasry Advertising & Marketing (Egypt) |
 | **Primary Domain** | [www.aymanelmasry.com](https://www.aymanelmasry.com) |
-| **Email** | [info@aymanelmasry.com](mailto:info@aymanelmasry.com) |
+| **Email** | [ayman@aymanelmasry.me](mailto:ayman@aymanelmasry.me) |
 | **WhatsApp** | [+20 111 330 0073](https://wa.me/201113300073) |
 | **Languages** | Arabic (native), English (fluent) |
 | **Workspace** | `~/Desktop/Apple/aymanelmasryael/` |

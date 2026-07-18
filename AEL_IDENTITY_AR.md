@@ -1,5 +1,5 @@
 
-> **AEL Vision Framework v2.2** — © 2026 أيمن المصري — AEL Digital Studio
+> **AEL Digital Studio™** — © 2026 أيمن المصري — AEL Digital Studio
 > جميع الحقوق محفوظة بموجب AEL Prompt IP System v1.0
 
 ---
@@ -9,10 +9,10 @@
   <br><br>
   <strong>أيمن المصري</strong><br>
   <em>مهندس رؤية · مخرج ذكاء اصطناعي · مصمم هويات</em><br>
-  <em>Visionary Architect · AI Orchestrator · Brand Designer</em>
+  <em>Visionary · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio</em>
   <br><br>
   <a href="https://www.aymanelmasry.com">www.aymanelmasry.com</a> ·
-  <a href="mailto:info@aymanelmasry.com">info@aymanelmasry.com</a><br>
+  <a href="mailto:ayman@aymanelmasry.me">ayman@aymanelmasry.me</a><br>
   <a href="https://github.com/aymanelmasryael">GitHub</a> ·
   <a href="https://linkedin.com/in/aymanelmasryael">LinkedIn</a> ·
   <a href="https://x.com/aymanelmasryael">X</a> ·
@@ -29,10 +29,10 @@
 | **الاسم الكامل** | أيمن المصري |
 | **الاستوديو** | AEL Digital Studio |
 | **اللقب (AR)** | مهندس رؤية · مخرج ذكاء اصطناعي · مصمم هويات |
-| **اللقب (EN)** | Visionary Architect · AI Orchestrator · Brand Designer |
+| **اللقب (EN)** | Visionary · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio |
 | **الكيانات القانونية** | Ayman Elmasry LLC (الإمارات)، Ayman Elmasry Advertising & Marketing (مصر) |
 | **الموقع الرسمي** | [www.aymanelmasry.com](https://www.aymanelmasry.com) |
-| **البريد الإلكتروني** | [info@aymanelmasry.com](mailto:info@aymanelmasry.com) |
+| **البريد الإلكتروني** | [ayman@aymanelmasry.me](mailto:ayman@aymanelmasry.me) |
 | **واتساب** | [+20 111 330 0073](https://wa.me/201113300073) |
 | **اللغات** | العربية (اللغة الأم)، الإنجليزية (طلاقة) |
 | **مساحة العمل** | `~/Desktop/Apple/aymanelmasryael/` |
