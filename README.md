@@ -6,11 +6,9 @@
 
 **Visionary · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio**
 
-Design drives the vision, AI powers the build. I build engines that produce, not just artifacts that sit.
+I define the vision behind digital products and orchestrate AI to bring that vision to life. As the founder of AEL Digital Studio, I design brand systems, AI-powered experiences, and digital platforms where strategy, design, and technology work as a unified system.
 
-I work at the intersection of artificial intelligence, computational design, and brand strategy — building engines that produce, not just artifacts that sit.
-
-Based in Alexandria, Egypt. Working with clients globally.
+Dubai · Egypt · Kuwait — collaborating with clients worldwide.
 
 <br>
 
