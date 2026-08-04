@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AEL Digital Studio — identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #000000;
+  --neutral-50: #FAFAFA;
+  --neutral-100: #F5F5F5;
+  --neutral-200: #E5E5E5;
+  --neutral-300: #D4D4D4;
+  --neutral-400: #A3A3A3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #2D2D2D;
+  --neutral-800: #1A1A1A;
+  --neutral-900: #111111;
+  --blue: #0074FF;
+  --violet: #6C47FF;
+  --teal: #00D4AA;
+  --pink: #FF4D8D;
+  --amber: #F59E0B;
+  --white: #FFFFFF;
+  --success: #10B981;
+  --error: #EF4444;
+  --info: #3B82F6;
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-default: rgba(255,255,255,0.10);
+  --border-strong: rgba(255,255,255,0.16);
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  background: var(--neutral-900);
+  border-right: 1px solid var(--border-subtle);
+  padding: 40px 28px;
+  overflow-y: auto;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-logo {
+  margin-bottom: 40px;
+}
+
+.sidebar-logo svg {
+  display: block;
+}
+
+.sidebar-logo .brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-top: 10px;
+}
+
+.sidebar-logo .version {
+  font-size: 10px;
+  color: var(--neutral-500);
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  flex: 1;
+}
+
+.sidebar-nav > li {
+  margin-bottom: 2px;
+}
+
+.sidebar-nav > li.section-header {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  color: var(--neutral-500);
+  padding: 16px 0 6px 0;
+  text-transform: uppercase;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--neutral-400);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.sidebar-nav a:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.04);
+}
+
+.sidebar-nav a.active {
+  color: var(--blue);
+  background: rgba(0,116,255,0.08);
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  font-size: 11px;
+  color: var(--neutral-600);
+  letter-spacing: 0.02em;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Main Content */
+.main {
+  margin-left: 260px;
+  flex: 1;
+  max-width: 960px;
+  padding: 64px 80px 120px;
+}
+
+/* Section */
+.section {
+  margin-bottom: 100px;
+  scroll-margin-top: 40px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section-number {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  color: var(--blue);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--neutral-400);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 0 0 48px 0;
+}
+
+/* Sub-section */
+.subsection {
+  margin-bottom: 48px;
+}
+
+.subsection-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.subsection-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--neutral-300);
+  max-width: 640px;
+  margin-bottom: 20px;
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 32px;
+  font-size: 13px;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--neutral-500);
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--neutral-200);
+  font-variant-numeric: tabular-nums;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table .label {
+  font-weight: 500;
+  color: var(--white);
+}
+
+/* Color Swatch Grid */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 16px 0 32px;
+}
+
+.color-swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: translateY(-2px);
+}
+
+.color-swatch-preview {
+  height: 80px;
+}
+
+.color-swatch-info {
+  padding: 14px;
+  background: var(--neutral-900);
+}
+
+.color-swatch-name {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.color-swatch-hex {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--neutral-400);
+  font-weight: 500;
+}
+
+.color-swatch-role {
+  font-size: 10px;
+  color: var(--neutral-500);
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+
+/* Neutral scale strip */
+.neutral-strip {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 16px 0 32px;
+  height: 56px;
+  border: 1px solid var(--border-subtle);
+}
+
+.neutral-strip-item {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* Typography scale */
+.type-sample {
+  margin-bottom: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.type-sample:last-child {
+  border-bottom: none;
+}
+
+.type-sample-tag {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.type-sample-spec {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--neutral-500);
+  margin-bottom: 8px;
+}
+
+.type-sample-render {
+  color: var(--white);
+  line-height: 1.2;
+}
+
+/* Card components */
+.component-card {
+  background: var(--neutral-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 32px;
+  margin-bottom: 20px;
+}
+
+.component-card-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.component-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.component-preview {
+  background: var(--black);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  padding: 28px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.component-spec {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--neutral-500);
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: #0062D6;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--border-strong);
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--neutral-300);
+}
+
+.btn-ghost:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.04);
+}
+
+/* Tags */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.tag-blue { background: rgba(0,116,255,0.12); color: #4D9FFF; }
+.tag-violet { background: rgba(108,71,255,0.12); color: #9B85FF; }
+.tag-teal { background: rgba(0,212,170,0.12); color: #33DFBD; }
+.tag-pink { background: rgba(255,77,141,0.12); color: #FF7AA6; }
+.tag-amber { background: rgba(245,158,11,0.12); color: #F7B84D; }
+.tag-success { background: rgba(16,185,129,0.12); color: #34D399; }
+.tag-error { background: rgba(239,68,68,0.12); color: #F87171; }
+
+/* Voice examples */
+.voice-block {
+  background: var(--neutral-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 28px;
+  margin-bottom: 16px;
+}
+
+.voice-block-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.voice-block-correct .voice-block-label { color: var(--success); }
+.voice-block-incorrect .voice-block-label { color: var(--error); }
+
+.voice-block-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--neutral-200);
+}
+
+/* Logo usage matrix */
+.logo-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0 32px;
+}
+
+.logo-cell {
+  background: var(--neutral-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+}
+
+.logo-cell.dark-bg { background: var(--black); }
+.logo-cell.light-bg { background: var(--white); }
+.logo-cell.blue-bg { background: var(--blue); }
+
+.logo-cell-label {
+  font-size: 10px;
+  color: var(--neutral-500);
+  letter-spacing: 0.04em;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Grid System */
+.grid-demo {
+  background: var(--neutral-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 0;
+  margin: 16px 0 32px;
+  overflow: hidden;
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.grid-row:last-child {
+  border-bottom: none;
+}
+
+.grid-col {
+  height: 32px;
+  background: rgba(0,116,255,0.15);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+/* Safe area diagram */
+.safe-area-demo {
+  background: var(--neutral-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 32px;
+  position: relative;
+}
+
+.safe-area-outer {
+  width: 180px;
+  height: 180px;
+  border: 1px dashed var(--neutral-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.safe-area-inner {
+  width: 90px;
+  height: 90px;
+  border: 1px solid var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.safe-area-label {
+  position: absolute;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--neutral-500);
+}
+
+/* Bad usage grid */
+.bad-usage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 16px 0 32px;
+}
+
+.bad-usage-cell {
+  background: var(--neutral-900);
+  border: 1px solid rgba(239,68,68,0.2);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.bad-usage-icon {
+  font-size: 20px;
+  margin-bottom: 8px;
+  opacity: 0.5;
+}
+
+.bad-usage-text {
+  font-size: 11px;
+  color: var(--neutral-400);
+  letter-spacing: 0.02em;
+}
+
+/* Do / Don't */
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0 32px;
+}
+
+.do-card {
+  background: rgba(16,185,129,0.05);
+  border: 1px solid rgba(16,185,129,0.15);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.dont-card {
+  background: rgba(239,68,68,0.05);
+  border: 1px solid rgba(239,68,68,0.15);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.do-card-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--success);
+  margin-bottom: 8px;
+}
+
+.dont-card-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--error);
+  margin-bottom: 8px;
+}
+
+.do-card-text, .dont-card-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--neutral-200);
+}
+
+/* Code token */
+.token-block {
+  background: var(--neutral-900);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 20px 24px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--neutral-300);
+  line-height: 1.7;
+  overflow-x: auto;
+  margin: 12px 0 24px;
+  white-space: pre;
+}
+
+.token-key { color: var(--blue); }
+.token-value { color: var(--teal); }
+.token-comment { color: var(--neutral-500); }
+
+/* Print */
+@media print {
+  .sidebar { display: none; }
+  .main { margin-left: 0; padding: 40px; max-width: 100%; }
+  body { background: white; color: black; }
+  .section-title { color: black; }
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; padding: 40px 24px 80px; }
+  .section-title { font-size: 28px; }
+  .color-grid { grid-template-columns: repeat(2, 1fr); }
+  .logo-matrix { grid-template-columns: repeat(2, 1fr); }
+  .bad-usage-grid { grid-template-columns: repeat(2, 1fr); }
+  .do-dont { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<nav class="sidebar">
+  <div class="sidebar-logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="52" height="52">
+      <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/>
+      <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="161.98" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+      <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+    </svg>
+    <div class="brand">AEL DIGITAL STUDIO</div>
+    <div class="version">Brand System v1.0</div>
+  </div>
+
+  <ul class="sidebar-nav">
+    <li class="section-header">Foundation</li>
+    <li><a href="#s01">01 — Identity</a></li>
+    <li><a href="#s02">02 — Logo System</a></li>
+    <li><a href="#s03">03 — Color System</a></li>
+    <li><a href="#s04">04 — Typography</a></li>
+
+    <li class="section-header">System</li>
+    <li><a href="#s05">05 — Components</a></li>
+    <li><a href="#s06">06 — Imagery</a></li>
+    <li><a href="#s07">07 — Voice</a></li>
+
+    <li class="section-header">Output</li>
+    <li><a href="#s08">08 — Templates</a></li>
+    <li><a href="#s09">09 — Assets</a></li>
+  </ul>
+
+  <div class="sidebar-footer">&copy; AEL Digital Studio<br>aymanelmasry.com</div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ================================================================ -->
+<!-- 01 IDENTITY -->
+<!-- ================================================================ -->
+<section class="section" id="s01">
+  <div class="section-number">Section 01</div>
+  <h1 class="section-title">Identity</h1>
+  <p class="section-subtitle">The foundational layer. Every visual, verbal, and systemic decision originates here.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Owner</h3>
+    <table class="data-table">
+      <tr><td class="label">Name</td><td>Ayman Elmasry</td></tr>
+      <tr><td class="label">Role</td><td>Visionary · AI Orchestrator · Brand Designer</td></tr>
+      <tr><td class="label">Entity (UAE)</td><td>Ayman Elmasry LLC</td></tr>
+      <tr><td class="label">Entity (Egypt)</td><td>Ayman Elmasry Advertising &amp; Marketing</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Company</h3>
+    <table class="data-table">
+      <tr><td class="label">Brand Name</td><td>AEL Digital Studio&trade;</td></tr>
+      <tr><td class="label">Type</td><td>AI-first technology and design company</td></tr>
+      <tr><td class="label">Domain</td><td>aymanelmasry.com</td></tr>
+      <tr><td class="label">Secondary</td><td>aymanelmasry.me</td></tr>
+      <tr><td class="label">GitHub</td><td>github.com/aymanelmasryael</td></tr>
+      <tr><td class="label">Email</td><td>ayman@aymanelmasry.me</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Mission</h3>
+    <p class="subsection-text">Empower creators, developers, designers, and organizations through intelligent visual systems and AI-powered design infrastructure.</p>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Vision</h3>
+    <p class="subsection-text">Become one of the world's leading companies in AI-driven visual computing, computational creativity, and intelligent design systems.</p>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Core Values</h3>
+    <table class="data-table">
+      <tr><td class="label">Innovation</td><td>Advance the frontier of what intelligence can design.</td></tr>
+      <tr><td class="label">Trust</td><td>Systems that earn confidence through transparency and reliability.</td></tr>
+      <tr><td class="label">Precision</td><td>Every pixel, every token, every decision — intentional.</td></tr>
+      <tr><td class="label">Intelligence</td><td>Design informed by data, research, and computational reasoning.</td></tr>
+      <tr><td class="label">Simplicity</td><td>Remove until only function remains.</td></tr>
+      <tr><td class="label">Clarity</td><td>Ambiguity is a design failure.</td></tr>
+      <tr><td class="label">Scalability</td><td>Systems that grow without breaking.</td></tr>
+      <tr><td class="label">Research</td><td>Continuous inquiry into visual computing and AI.</td></tr>
+      <tr><td class="label">Engineering Excellence</td><td>Code-level rigor applied to visual output.</td></tr>
+      <tr><td class="label">Human-Centered Design</td><td>Technology in service of human capability.</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Brand Personality</h3>
+    <table class="data-table">
+      <tr><td>Professional</td><td>Confident</td><td>Minimal</td></tr>
+      <tr><td>Elegant</td><td>Precise</td><td>Technical</td></tr>
+      <tr><td>Forward-thinking</td><td>Calm</td><td>Modern</td></tr>
+      <tr><td>Visionary</td><td colspan="2">Never playful. Never childish. Never loud.</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Target Audience</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+      <span class="tag tag-blue">AI Engineers</span>
+      <span class="tag tag-violet">Software Engineers</span>
+      <span class="tag tag-blue">Developers</span>
+      <span class="tag tag-violet">UX Designers</span>
+      <span class="tag tag-teal">Product Designers</span>
+      <span class="tag tag-pink">Creative Directors</span>
+      <span class="tag tag-amber">Brand Strategists</span>
+      <span class="tag tag-blue">Technology Companies</span>
+      <span class="tag tag-teal">Startups</span>
+      <span class="tag tag-violet">Enterprise Clients</span>
+      <span class="tag tag-amber">Universities</span>
+      <span class="tag tag-blue">Researchers</span>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Design Philosophy</h3>
+    <p class="subsection-text"><strong>Invisible Design.</strong> Every visual element must have a functional purpose. Whitespace is part of the system. Minimal interfaces. Swiss-inspired typography. Grid-based layouts. Strong visual hierarchy. No decorative effects. No unnecessary gradients. No visual noise.</p>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 02 LOGO SYSTEM -->
+<!-- ================================================================ -->
+<section class="section" id="s02">
+  <div class="section-number">Section 02</div>
+  <h1 class="section-title">Logo System</h1>
+  <p class="section-subtitle">The AEL logo is a modular geometric mark. It is never redrawn, never reinterpreted, never stylized.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Logo Meaning</h3>
+    <p class="subsection-text">The logo is built from a 7x7 square grid. The top segment forms the letter "A" through negative space — a curved arch carved from a solid block. The bottom segment is a matrix of 4x4 blue squares representing structured intelligence, modular systems, and computational precision. The mark reads as both an architectural form and a digital signature.</p>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Primary Logo</h3>
+    <div class="logo-matrix">
+      <div class="logo-cell dark-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="80" height="80">
+          <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/>
+          <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="161.98" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+        </svg>
+      </div>
+      <div class="logo-cell blue-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="80" height="80">
+          <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/>
+          <rect y="97.19" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect y="129.58" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="129.58" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="161.98" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+          <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#ffffff"/>
+        </svg>
+      </div>
+      <div class="logo-cell light-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="80" height="80">
+          <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#000000"/>
+          <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="161.98" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+        </svg>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--neutral-500);text-align:center;letter-spacing:0.04em;">Dark background &nbsp;·&nbsp; Blue background &nbsp;·&nbsp; Light background</p>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Safe Area &amp; Minimum Size</h3>
+    <p class="subsection-text">The safe area equals 50% of the logo height on all four sides. No text, graphic, or edge may enter this zone. Minimum render size: 24px in height for digital, 8mm for print.</p>
+    <div class="safe-area-demo">
+      <div class="safe-area-outer">
+        <div class="safe-area-inner">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="50" height="50">
+            <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/>
+            <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"/><rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#0074FF"/><rect y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#0074FF"/><rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#0074FF"/><rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="129.58" width="32.4" height="32.4" fill="#0074FF"/><rect x="161.98" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="194.38" width="32.4" height="32.4" fill="#0074FF"/><rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect y="194.38" width="32.4" height="32.4" fill="#0074FF"/><rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#0074FF"/><rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#0074FF"/><rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+            <rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#0074FF"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Correct vs Incorrect Usage</h3>
+    <div class="do-dont">
+      <div class="do-card">
+        <div class="do-card-label">DO</div>
+        <div class="do-card-text">Use only the approved SVG file. Maintain aspect ratio. Apply on black, white, or AEL Blue backgrounds. Scale proportionally.</div>
+      </div>
+      <div class="dont-card">
+        <div class="dont-card-label">DO NOT</div>
+        <div class="dont-card-text">Stretch, rotate, or skew the logo. Apply drop shadows, gradients, or borders. Change the blue squares to another color. Place on busy backgrounds. Redraw or reinterpret the mark.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Monochrome Versions</h3>
+    <div class="logo-matrix">
+      <div class="logo-cell dark-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="60" height="60"><path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"/><rect y="97.19" width="32.4" height="32.4" fill="#ffffff"/><rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#ffffff"/><rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#ffffff"/><rect y="129.58" width="32.4" height="32.4" fill="#ffffff"/><rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#ffffff"/><rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#ffffff"/><rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#ffffff"/><rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#ffffff"/><rect x="129.58" width="32.4" height="32.4" fill="#ffffff"/><rect x="161.98" width="32.4" height="32.4" fill="#ffffff"/><rect x="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#ffffff"/><rect y="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#ffffff"/><rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#ffffff"/></svg>
+      </div>
+      <div class="logo-cell light-bg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="60" height="60"><path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#000000"/><rect y="97.19" width="32.4" height="32.4" fill="#000000"/><rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#000000"/><rect x="64.79" y="129.58" width="32.4" height="32.4" fill="#000000"/><rect y="129.58" width="32.4" height="32.4" fill="#000000"/><rect x="129.58" y="97.19" width="32.4" height="32.4" fill="#000000"/><rect x="161.98" y="129.58" width="32.4" height="32.4" fill="#000000"/><rect x="194.38" y="129.58" width="32.4" height="32.4" fill="#000000"/><rect x="129.58" y="129.58" width="32.4" height="32.4" fill="#000000"/><rect x="129.58" width="32.4" height="32.4" fill="#000000"/><rect x="161.98" width="32.4" height="32.4" fill="#000000"/><rect x="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="129.58" y="32.4" width="32.4" height="32.4" fill="#000000"/><rect y="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="32.4" y="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="64.79" y="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="97.19" y="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="129.58" y="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="161.98" y="194.38" width="32.4" height="32.4" fill="#000000"/><rect x="194.38" y="194.38" width="32.4" height="32.4" fill="#000000"/></svg>
+      </div>
+      <div class="logo-cell" style="display:flex;flex-direction:column;gap:8px;align-items:center;">
+        <span style="font-size:11px;color:var(--neutral-500);">White-out version</span>
+        <span style="font-size:11px;color:var(--neutral-500);">Black-out version</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 03 COLOR SYSTEM -->
+<!-- ================================================================ -->
+<section class="section" id="s03">
+  <div class="section-number">Section 03</div>
+  <h1 class="section-title">Color System</h1>
+  <p class="section-subtitle">A calibrated spectrum of 20 colors spanning brand expression, semantic meaning, and neutral structure.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Primary</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#0074FF;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">AEL Blue</div>
+          <div class="color-swatch-hex">#0074FF</div>
+          <div class="color-swatch-role">Trust · Intelligence · Primary action</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Secondary</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#6C47FF;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">AEL Violet</div>
+          <div class="color-swatch-hex">#6C47FF</div>
+          <div class="color-swatch-role">Innovation · Vision · Secondary accent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Accent &amp; Semantic</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#00D4AA;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">AEL Teal</div>
+          <div class="color-swatch-hex">#00D4AA</div>
+          <div class="color-swatch-role">Growth · Success · Balance</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#FF4D8D;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">AEL Pink</div>
+          <div class="color-swatch-hex">#FF4D8D</div>
+          <div class="color-swatch-role">Energy · CTA · Interaction</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#F59E0B;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">AEL Amber</div>
+          <div class="color-swatch-hex">#F59E0B</div>
+          <div class="color-swatch-role">Warning · Highlights · Attention</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#10B981;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Success</div>
+          <div class="color-swatch-hex">#10B981</div>
+          <div class="color-swatch-role">Confirmation · Completion</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#EF4444;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Error</div>
+          <div class="color-swatch-hex">#EF4444</div>
+          <div class="color-swatch-role">Destructive · Critical</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-swatch-preview" style="background:#3B82F6;"></div>
+        <div class="color-swatch-info">
+          <div class="color-swatch-name">Info</div>
+          <div class="color-swatch-hex">#3B82F6</div>
+          <div class="color-swatch-role">Information · Status</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Neutral Scale</h3>
+    <div class="neutral-strip">
+      <div class="neutral-strip-item" style="background:#000000;color:#FFFFFF;">#000</div>
+      <div class="neutral-strip-item" style="background:#111111;color:#FFFFFF;">900</div>
+      <div class="neutral-strip-item" style="background:#1A1A1A;color:#FFFFFF;">800</div>
+      <div class="neutral-strip-item" style="background:#2D2D2D;color:#FFFFFF;">700</div>
+      <div class="neutral-strip-item" style="background:#525252;color:#FFFFFF;">600</div>
+      <div class="neutral-strip-item" style="background:#737373;color:#FFFFFF;">500</div>
+      <div class="neutral-strip-item" style="background:#A3A3A3;color:#000000;">400</div>
+      <div class="neutral-strip-item" style="background:#D4D4D4;color:#000000;">300</div>
+      <div class="neutral-strip-item" style="background:#E5E5E5;color:#000000;">200</div>
+      <div class="neutral-strip-item" style="background:#F5F5F5;color:#000000;">100</div>
+      <div class="neutral-strip-item" style="background:#FAFAFA;color:#000000;">50</div>
+      <div class="neutral-strip-item" style="background:#FFFFFF;color:#000000;">#FFF</div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Color Roles &amp; Accessibility</h3>
+    <table class="data-table">
+      <tr><th>Token</th><th>Color</th><th>Role</th><th>Contrast (AA/AAA)</th></tr>
+      <tr><td class="label">--bg-primary</td><td>#000000</td><td>Primary background</td><td>—</td></tr>
+      <tr><td class="label">--bg-secondary</td><td>#111111</td><td>Card / surface background</td><td>—</td></tr>
+      <tr><td class="label">--bg-tertiary</td><td>#1A1A1A</td><td>Elevated surface</td><td>—</td></tr>
+      <tr><td class="label">--border-subtle</td><td>rgba(255,255,255,0.06)</td><td>Subtle dividers</td><td>—</td></tr>
+      <tr><td class="label">--border-default</td><td>rgba(255,255,255,0.10)</td><td>Default borders</td><td>—</td></tr>
+      <tr><td class="label">--border-strong</td><td>rgba(255,255,255,0.16)</td><td>Emphasis borders</td><td>—</td></tr>
+      <tr><td class="label">--text-primary</td><td>#FFFFFF</td><td>Primary text</td><td>AAA (21:1)</td></tr>
+      <tr><td class="label">--text-secondary</td><td>#A3A3A3</td><td>Secondary text</td><td>AA (7.1:1)</td></tr>
+      <tr><td class="label">--text-tertiary</td><td>#737373</td><td>Tertiary / caption</td><td>AA (4.6:1)</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Design Tokens (CSS)</h3>
+    <div class="token-block"><span class="token-comment">/* Brand Colors */</span>
+<span class="token-key">--color-blue</span>: <span class="token-value">#0074FF</span>;
+<span class="token-key">--color-violet</span>: <span class="token-value">#6C47FF</span>;
+<span class="token-key">--color-teal</span>: <span class="token-value">#00D4AA</span>;
+<span class="token-key">--color-pink</span>: <span class="token-value">#FF4D8D</span>;
+<span class="token-key">--color-amber</span>: <span class="token-value">#F59E0B</span>;
+
+<span class="token-comment">/* Semantic */</span>
+<span class="token-key">--color-success</span>: <span class="token-value">#10B981</span>;
+<span class="token-key">--color-error</span>: <span class="token-value">#EF4444</span>;
+<span class="token-key">--color-info</span>: <span class="token-value">#3B82F6</span>;
+
+<span class="token-comment">/* Neutrals */</span>
+<span class="token-key">--neutral-900</span>: <span class="token-value">#111111</span>;
+<span class="token-key">--neutral-800</span>: <span class="token-value">#1A1A1A</span>;
+<span class="token-key">--neutral-700</span>: <span class="token-value">#2D2D2D</span>;
+<span class="token-key">--neutral-600</span>: <span class="token-value">#525252</span>;
+<span class="token-key">--neutral-500</span>: <span class="token-value">#737373</span>;
+<span class="token-key">--neutral-400</span>: <span class="token-value">#A3A3A3</span>;
+<span class="token-key">--neutral-300</span>: <span class="token-value">#D4D4D4</span>;
+<span class="token-key">--neutral-200</span>: <span class="token-value">#E5E5E5</span>;
+<span class="token-key">--neutral-100</span>: <span class="token-value">#F5F5F5</span>;
+<span class="token-key">--neutral-50</span>: <span class="token-value">#FAFAFA</span>;</div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 04 TYPOGRAPHY -->
+<!-- ================================================================ -->
+<section class="section" id="s04">
+  <div class="section-number">Section 04</div>
+  <h1 class="section-title">Typography</h1>
+  <p class="section-subtitle">A two-font system engineered for readability, hierarchy, and Swiss precision.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Font Stack</h3>
+    <table class="data-table">
+      <tr><th>Role</th><th>Font</th><th>Fallback</th></tr>
+      <tr><td class="label">Heading</td><td>Inter</td><td>-apple-system, BlinkMacSystemFont, sans-serif</td></tr>
+      <tr><td class="label">Body</td><td>Inter</td><td>-apple-system, BlinkMacSystemFont, sans-serif</td></tr>
+      <tr><td class="label">Mono / Code</td><td>JetBrains Mono</td><td>SF Mono, Fira Code, monospace</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Type Scale</h3>
+    <div class="type-sample">
+      <div class="type-sample-tag">H1 · Heading 1</div>
+      <div class="type-sample-spec">Inter Bold 800 · 64px / 1.1 · tracking: -0.03em</div>
+      <div class="type-sample-render" style="font-size:64px;font-weight:800;letter-spacing:-0.03em;">Build intelligent systems</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-sample-tag">H2 · Heading 2</div>
+      <div class="type-sample-spec">Inter Bold 700 · 48px / 1.15 · tracking: -0.02em</div>
+      <div class="type-sample-render" style="font-size:48px;font-weight:700;letter-spacing:-0.02em;">Computational design infrastructure</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-sample-tag">H3 · Heading 3</div>
+      <div class="type-sample-spec">Inter SemiBold 600 · 32px / 1.2 · tracking: -0.02em</div>
+      <div class="type-sample-render" style="font-size:32px;font-weight:600;letter-spacing:-0.02em;">AI-driven visual computing for the next decade</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-sample-tag">H4 · Heading 4</div>
+      <div class="type-sample-spec">Inter SemiBold 600 · 24px / 1.25 · tracking: -0.01em</div>
+      <div class="type-sample-render" style="font-size:24px;font-weight:600;letter-spacing:-0.01em;">Precision engineering meets visual intelligence</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-sample-tag">Body · Paragraph</div>
+      <div class="type-sample-spec">Inter Regular 400 · 16px / 1.6 · tracking: 0</div>
+      <div class="type-sample-render" style="font-size:16px;font-weight:400;line-height:1.6;max-width:600px;">AEL Digital Studio is an AI-first technology and design company focused on building intelligent digital systems. Core expertise includes artificial intelligence, prompt engineering, visual intelligence, and computational design.</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-sample-tag">Small · Caption</div>
+      <div class="type-sample-spec">Inter Regular 400 · 13px / 1.5 · tracking: 0.01em</div>
+      <div class="type-sample-render" style="font-size:13px;font-weight:400;line-height:1.5;color:var(--neutral-400);">AEL Digital Studio &trade; &mdash; Brand System v1.0 &mdash; aymanelmasry.com</div>
+    </div>
+    <div class="type-sample">
+      <div class="type-sample-tag">Code · Monospace</div>
+      <div class="type-sample-spec">JetBrains Mono Regular 400 · 13px / 1.6</div>
+      <div class="type-sample-render" style="font-family:var(--font-mono);font-size:13px;color:var(--teal);"><span style="color:var(--blue);">const</span> brand <span style="color:var(--neutral-300);">=</span> <span style="color:var(--neutral-300);">{</span> <span style="color:var(--neutral-200);">name</span>: <span style="color:var(--teal);">"AEL"</span> <span style="color:var(--neutral-300);">}</span>;</div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Typography Tokens (CSS)</h3>
+    <div class="token-block"><span class="token-comment">/* Type Scale */</span>
+<span class="token-key">--text-h1</span>: <span class="token-value">800 64px/1.1 'Inter', sans-serif</span>;
+<span class="token-key">--text-h2</span>: <span class="token-value">700 48px/1.15 'Inter', sans-serif</span>;
+<span class="token-key">--text-h3</span>: <span class="token-value">600 32px/1.2 'Inter', sans-serif</span>;
+<span class="token-key">--text-h4</span>: <span class="token-value">600 24px/1.25 'Inter', sans-serif</span>;
+<span class="token-key">--text-body</span>: <span class="token-value">400 16px/1.6 'Inter', sans-serif</span>;
+<span class="token-key">--text-small</span>: <span class="token-value">400 13px/1.5 'Inter', sans-serif</span>;
+<span class="token-key">--text-code</span>: <span class="token-value">400 13px/1.6 'JetBrains Mono', monospace</span>;
+
+<span class="token-comment">/* Letter Spacing */</span>
+<span class="token-key">--tracking-tight</span>: <span class="token-value">-0.03em</span>;
+<span class="token-key">--tracking-normal</span>: <span class="token-value">0</span>;
+<span class="token-key">--tracking-wide</span>: <span class="token-value">0.04em</span>;
+<span class="token-key">--tracking-label</span>: <span class="token-value">0.08em</span>;</div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 05 COMPONENTS -->
+<!-- ================================================================ -->
+<section class="section" id="s05">
+  <div class="section-number">Section 05</div>
+  <h1 class="section-title">Components</h1>
+  <p class="section-subtitle">Standardized interface primitives. Every component follows the same rules: dark canvas, blue action, minimal decoration.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Buttons</h3>
+    <div class="component-card">
+      <div class="component-card-label">Component</div>
+      <div class="component-card-title">Primary, Secondary, Ghost</div>
+      <div class="component-preview">
+        <button class="btn btn-primary">Primary Action</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-ghost">Ghost</button>
+      </div>
+      <div class="component-spec">
+        Radius: 8px &nbsp;|&nbsp; Padding: 12px 24px &nbsp;|&nbsp; Weight: 600
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Tags</h3>
+    <div class="component-card">
+      <div class="component-card-label">Component</div>
+      <div class="component-card-title">Status Tags</div>
+      <div class="component-preview">
+        <span class="tag tag-blue">AI</span>
+        <span class="tag tag-violet">Design</span>
+        <span class="tag tag-teal">Success</span>
+        <span class="tag tag-pink">Active</span>
+        <span class="tag tag-amber">Warning</span>
+        <span class="tag tag-success">Done</span>
+        <span class="tag tag-error">Failed</span>
+      </div>
+      <div class="component-spec">
+        Radius: 6px &nbsp;|&nbsp; Padding: 4px 10px &nbsp;|&nbsp; Font: 11px / 500
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Cards</h3>
+    <div class="component-card">
+      <div class="component-card-label">Component</div>
+      <div class="component-card-title">Surface Card</div>
+      <div class="component-preview" style="flex-direction:column;align-items:flex-start;gap:12px;">
+        <div style="background:var(--neutral-900);border:1px solid var(--border-subtle);border-radius:10px;padding:24px;width:100%;max-width:400px;">
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;color:var(--blue);margin-bottom:6px;">CARD LABEL</div>
+          <div style="font-size:18px;font-weight:700;margin-bottom:6px;">Card Title</div>
+          <div style="font-size:14px;color:var(--neutral-400);line-height:1.5;">Card description with supporting text. Keep it concise and functional.</div>
+        </div>
+      </div>
+      <div class="component-spec">
+        Radius: 10px &nbsp;|&nbsp; Padding: 24px &nbsp;|&nbsp; Background: --neutral-900 &nbsp;|&nbsp; Border: --border-subtle
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Grid System</h3>
+    <div class="grid-demo">
+      <div class="grid-row">
+        <div class="grid-col" style="grid-column:span 12;">12</div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-col" style="grid-column:span 6;">6</div>
+        <div class="grid-col" style="grid-column:span 6;">6</div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-col" style="grid-column:span 4;">4</div>
+        <div class="grid-col" style="grid-column:span 4;">4</div>
+        <div class="grid-col" style="grid-column:span 4;">4</div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-col" style="grid-column:span 3;">3</div>
+        <div class="grid-col" style="grid-column:span 3;">3</div>
+        <div class="grid-col" style="grid-column:span 3;">3</div>
+        <div class="grid-col" style="grid-column:span 3;">3</div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-col" style="grid-column:span 8;">8</div>
+        <div class="grid-col" style="grid-column:span 4;">4</div>
+      </div>
+    </div>
+    <p class="subsection-text">12-column grid. Gap: 24px. Max content width: 1200px. Side margins: responsive (24–80px).</p>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Icons</h3>
+    <div class="component-card">
+      <div class="component-card-label">Component</div>
+      <div class="component-card-title">Icon Library</div>
+      <div class="component-preview" style="gap:24px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </div>
+      <div class="component-spec">
+        Style: Minimal outline &nbsp;|&nbsp; Stroke: 1.5px &nbsp;|&nbsp; Color: --neutral-400 &nbsp;|&nbsp; Size: 24x24 (standard), 16x16 (small)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 06 IMAGERY -->
+<!-- ================================================================ -->
+<section class="section" id="s06">
+  <div class="section-number">Section 06</div>
+  <h1 class="section-title">Imagery</h1>
+  <p class="section-subtitle">Visual assets governed by precision, not decoration. Every image serves a functional role.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Photography Direction</h3>
+    <table class="data-table">
+      <tr><th>Subject</th><th>Treatment</th><th>Context</th></tr>
+      <tr><td>Technology</td><td>Dark, high contrast, minimal</td><td>Hardware, code screens, AI visualization</td></tr>
+      <tr><td>Workspace</td><td>Clean, organized, intentional</td><td>Desk setups, studio environments</td></tr>
+      <tr><td>Architecture</td><td>Geometric, structural, large scale</td><td>Modern buildings, grid patterns</td></tr>
+      <tr><td>People</td><td>Professional, calm, focused</td><td>Engineers, designers at work</td></tr>
+      <tr><td>Abstract</td><td>Lines, grids, data patterns</td><td>Computational visuals, blueprints</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Image Treatment Rules</h3>
+    <table class="data-table">
+      <tr><td class="label">Color grading</td><td>Desaturated by 10–20%. Blues and neutrals emphasized.</td></tr>
+      <tr><td class="label">Overlays</td><td>Subtle blue gradient overlays allowed for hero sections. Opacity max 15%.</td></tr>
+      <tr><td class="label">Borders</td><td>1px subtle border (rgba 255,255,255,0.06) on all images.</td></tr>
+      <tr><td class="label">Radius</td><td>8–10px for cards. 0px for full-bleed hero images.</td></tr>
+      <tr><td class="label">Aspect ratios</td><td>16:9 (hero), 4:3 (cards), 1:1 (avatars).</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">AI-Generated Image Guidelines</h3>
+    <p class="subsection-text">When generating images via AI (Midjourney, DALL-E, Stable Diffusion), adhere to these constraints: dark environments, geometric compositions, blue/neutral palette, no text within images, no faces unless professional context, no fantasy or decorative elements. Prompt structure: <code style="font-family:var(--font-mono);font-size:12px;background:var(--neutral-900);padding:2px 6px;border-radius:4px;">[subject] · dark environment · minimal composition · geometric lines · blue accent · professional · 8k · architectural photography</code></p>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 07 VOICE -->
+<!-- ================================================================ -->
+<section class="section" id="s07">
+  <div class="section-number">Section 07</div>
+  <h1 class="section-title">Voice</h1>
+  <p class="section-subtitle">The linguistic layer of the brand. How AEL speaks across every channel, platform, and medium.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Tone Principles</h3>
+    <table class="data-table">
+      <tr><td class="label">Professional</td><td>Speak as an expert. No casual language.</td></tr>
+      <tr><td class="label">Technical</td><td>Prefer precise terminology. Assume an intelligent audience.</td></tr>
+      <tr><td class="label">Minimal</td><td>Short sentences. Remove filler words. One idea per sentence.</td></tr>
+      <tr><td class="label">Evidence-based</td><td>Support claims. Cite data when possible. No vague superlatives.</td></tr>
+      <tr><td class="label">Confident</td><td>Direct statements. No hedging. No "we believe" — state as fact.</td></tr>
+      <tr><td class="label">Educational</td><td>Teach through communication. Explain the "why" not just the "what."</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Writing Rules</h3>
+    <div class="do-dont">
+      <div class="do-card">
+        <div class="do-card-label">DO</div>
+        <div class="do-card-text">
+          Use short paragraphs (2–3 sentences max). Write in active voice. Use precise technical vocabulary. Lead with the conclusion. Use numerals for data: "reduced latency by 40%."
+        </div>
+      </div>
+      <div class="dont-card">
+        <div class="dont-card-label">DO NOT</div>
+        <div class="dont-card-text">
+          Use marketing hype: "revolutionary," "game-changing," "unprecedented." Use emojis. Use slang or internet abbreviations. Write in passive voice. Use exclamation marks. Exaggerate claims.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Examples</h3>
+    <div class="voice-block voice-block-correct">
+      <div class="voice-block-label">Correct</div>
+      <div class="voice-block-text">AEL Digital Studio builds AI-driven design infrastructure for engineering teams. The platform reduces visual asset production time by 60% through automated design tokens and intelligent layout systems.</div>
+    </div>
+    <div class="voice-block voice-block-incorrect">
+      <div class="voice-block-label">Incorrect</div>
+      <div class="voice-block-text">We're super excited to announce our amazing new AI design platform that will revolutionize the way you create stunning visuals in record time! It's a game-changer for creative teams everywhere.</div>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">AI Prompt Rules</h3>
+    <p class="subsection-text">When instructing AI systems (Canva AI, ChatGPT, Claude) to generate content for AEL, always include this block at the start of every prompt:</p>
+    <div class="token-block"><span class="token-comment">/* AEL AI Prompt Context — Inject at session start */</span>
+Brand: AEL Digital Studio™
+Founder: Ayman Elmasry · AI Orchestrator · Brand Designer
+Voice: Professional · Minimal · Technical · Evidence-based
+Colors: #000000 | #0074FF | #6C47FF | #00D4AA | #FF4D8D | #F59E0B
+Typography: Inter (heading + body) · JetBrains Mono (code)
+Design: Swiss minimal · Dark mode · Grid-based · No decorations
+<span class="token-key">NO</span>: emojis · slang · exclamation marks · hype · passive voice</div>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 08 TEMPLATES -->
+<!-- ================================================================ -->
+<section class="section" id="s08">
+  <div class="section-number">Section 08</div>
+  <h1 class="section-title">Templates</h1>
+  <p class="section-subtitle">Standardized output formats. Every template inherits from the same design token system.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Template Matrix</h3>
+    <table class="data-table">
+      <tr><th>Template</th><th>Dimensions</th><th>Format</th><th>Key Rules</th></tr>
+      <tr><td class="label">LinkedIn Post</td><td>1080 x 1350</td><td>PNG / JPG</td><td>Dark bg, blue accent, logo bottom-right</td></tr>
+      <tr><td class="label">LinkedIn Carousel</td><td>1080 x 1350 x N</td><td>PDF / PNG</td><td>Consistent header, page numbers, blue progress bar</td></tr>
+      <tr><td class="label">Instagram Post</td><td>1080 x 1080</td><td>PNG / JPG</td><td>1:1 ratio, centered composition, minimal text</td></tr>
+      <tr><td class="label">Instagram Story</td><td>1080 x 1920</td><td>PNG / JPG</td><td>Vertical, logo top, CTA bottom</td></tr>
+      <tr><td class="label">YouTube Thumbnail</td><td>1280 x 720</td><td>JPG</td><td>High contrast, large text, blue accent</td></tr>
+      <tr><td class="label">Presentation</td><td>1920 x 1080</td><td>PDF / PPTX</td><td>16:9, dark slides, grid layout, 24pt min text</td></tr>
+      <tr><td class="label">Website Hero</td><td>1440 x 900</td><td>PNG / WebP</td><td>Full-bleed, dark, headline + subhead + CTA</td></tr>
+      <tr><td class="label">Business Card</td><td>90 x 50 mm</td><td>PDF / PNG</td><td>Black bg, white text, blue logo, clean grid</td></tr>
+      <tr><td class="label">Letterhead</td><td>A4 (210 x 297)</td><td>PDF</td><td>White bg, logo top-left, blue accent line</td></tr>
+      <tr><td class="label">Email Signature</td><td>600 x 120 (approx)</td><td>HTML / PNG</td><td>Minimal, name + title + link, blue logo</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ================================================================ -->
+<!-- 09 ASSETS -->
+<!-- ================================================================ -->
+<section class="section" id="s09">
+  <div class="section-number">Section 09</div>
+  <h1 class="section-title">Assets</h1>
+  <p class="section-subtitle">Production-ready files. Download, integrate, deploy.</p>
+  <hr class="section-divider">
+
+  <div class="subsection">
+    <h3 class="subsection-title">Logo Package</h3>
+    <table class="data-table">
+      <tr><th>File</th><th>Format</th><th>Usage</th></tr>
+      <tr><td class="label">ael-logo-primary</td><td>SVG</td><td>Web, digital interfaces</td></tr>
+      <tr><td class="label">ael-logo-white</td><td>PNG (transparent)</td><td>Dark backgrounds, video overlays</td></tr>
+      <tr><td class="label">ael-logo-blue</td><td>PNG (transparent)</td><td>Light backgrounds, print</td></tr>
+      <tr><td class="label">ael-logo-black</td><td>PNG (transparent)</td><td>Monochrome applications, watermark</td></tr>
+      <tr><td class="label">ael-logo-monochrome-white</td><td>SVG / PNG</td><td>Single-color dark surface applications</td></tr>
+      <tr><td class="label">ael-logo-monochrome-black</td><td>SVG / PNG</td><td>Single-color light surface applications</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Patterns &amp; Backgrounds</h3>
+    <table class="data-table">
+      <tr><th>Asset</th><th>Type</th><th>Description</th></tr>
+      <tr><td class="label">Geometric Grid</td><td>SVG / CSS</td><td>48px grid overlay, 3% white opacity</td></tr>
+      <tr><td class="label">Blueprint Lines</td><td>SVG Pattern</td><td>Technical line work, engineering aesthetic</td></tr>
+      <tr><td class="label">Dot Matrix</td><td>SVG / PNG</td><td>4px dot grid, 5% opacity, AI/tech visual</td></tr>
+      <tr><td class="label">Gradient Mesh</td><td>PNG</td><td>Blue-to-violet subtle gradient, hero sections</td></tr>
+    </table>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title">Integration Checklist</h3>
+    <p class="subsection-text">Before importing into Canva, Figma, or any design tool:</p>
+    <table class="data-table">
+      <tr><td style="color:var(--success);font-weight:600;">1</td><td>Upload all 6 logo variants</td></tr>
+      <tr><td style="color:var(--success);font-weight:600;">2</td><td>Add all 20 colors to the palette (5 brand + 3 semantic + 12 neutral)</td></tr>
+      <tr><td style="color:var(--success);font-weight:600;">3</td><td>Set Inter as default heading and body font</td></tr>
+      <tr><td style="color:var(--success);font-weight:600;">4</td><td>Apply brand voice rules to AI content generation settings</td></tr>
+      <tr><td style="color:var(--success);font-weight:600;">5</td><td>Create template presets from the template matrix</td></tr>
+      <tr><td style="color:var(--success);font-weight:600;">6</td><td>Upload photography library with correct treatment</td></tr>
+      <tr><td style="color:var(--success);font-weight:600;">7</td><td>Test output against design principles before publishing</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- END OF DOCUMENT -->
+<div style="margin-top:80px;padding-top:32px;border-top:1px solid var(--border-subtle);">
+  <p style="font-size:12px;color:var(--neutral-600);letter-spacing:0.02em;">AEL Digital Studio &trade; &mdash; Brand Operating System v1.0 &mdash; <a href="https://aymanelmasry.com" style="color:var(--blue);text-decoration:none;">aymanelmasry.com</a></p>
+  <p style="font-size:11px;color:var(--neutral-700);letter-spacing:0.02em;margin-top:4px;">This document is the single source of truth for the AEL brand. All platforms consume from this system. Do not duplicate. Do not deviate.</p>
+</div>
+
+</main>
+
+<script>
+(function() {
+  var links = document.querySelectorAll('.sidebar-nav a');
+  var sections = document.querySelectorAll('.section');
+
+  function updateActive() {
+    var scrollPos = window.scrollY + 120;
+    var current = sections[0];
+    sections.forEach(function(s) {
+      if (s.offsetTop <= scrollPos) current = s;
+    });
+    var id = current.getAttribute('id');
+    links.forEach(function(l) {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
+</script>
+
+</body>
+</html>
