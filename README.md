@@ -12,6 +12,8 @@
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=aymanelmasryael.aymanelmasryael&left_text=Profile%20Views)
 ![Followers](https://img.shields.io/github/followers/aymanelmasryael?style=flat-square&color=0074FF&label=Followers)
+![Validate](https://github.com/aymanelmasryael/aymanelmasryael/actions/workflows/validate.yml/badge.svg)
+![Release](https://img.shields.io/github/v/release/aymanelmasryael/aymanelmasryael?style=flat-square&color=0074FF&label=Release)
 
 </div>
 

@@ -1,0 +1,29 @@
+# AEL Digital Studio — Code Owners
+# Format: <pattern>  @<owner>
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owner (all files)
+*                       @aymanelmasryael
+
+# Brand & documentation
+/README.md              @aymanelmasryael
+/README_AR.md           @aymanelmasryael
+/CHANGELOG.md           @aymanelmasryael
+/CONTRIBUTING.md        @aymanelmasryael
+/CODE_OF_CONDUCT.md     @aymanelmasryael
+/ROADMAP.md             @aymanelmasryael
+/SECURITY.md            @aymanelmasryael
+/LICENSE                @aymanelmasryael
+
+# Brand assets
+/assets/                @aymanelmasryael
+/ael-logo.svg           @aymanelmasryael
+
+# Identity docs
+/AEL_IDENTITY_EN.md     @aymanelmasryael
+/AEL_IDENTITY_AR.md     @aymanelmasryael
+/identity.html          @aymanelmasryael
+
+# CI/CD & GitHub config
+/.github/               @aymanelmasryael
+/.gitignore             @aymanelmasryael
