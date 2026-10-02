@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="ael-logo.svg" alt="AEL Digital Studio" width="120" height="120">
+<img src="assets/banner.svg" alt="Ayman Elmasry — AEL Digital Studio" width="100%">
 
-# Ayman Elmasry
-
-**Visionary Architect · AI Orchestrator · Brand Designer · Founder @ AEL Digital Studio**
+<br>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-aymanelmasry.com-0074FF?style=flat-square&logo=googlechrome&logoColor=white)](https://www.aymanelmasry.com)
 [![Identity](https://img.shields.io/badge/Identity-System-6C47FF?style=flat-square&logo=googledocs&logoColor=white)](https://aymanelmasry.me/identity.html)
@@ -14,7 +12,6 @@
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=aymanelmasryael.aymanelmasryael&left_text=Profile%20Views)
 ![Followers](https://img.shields.io/github/followers/aymanelmasryael?style=flat-square&color=0074FF&label=Followers)
-![Stars](https://img.shields.io/github/stars/aymanelmasryael?style=flat-square&color=6C47FF&label=Stars)
 
 </div>
 

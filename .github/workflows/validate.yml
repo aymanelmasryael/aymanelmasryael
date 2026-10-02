@@ -1,0 +1,45 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate HTML
+        run: |
+          if [ -f identity.html ]; then
+            npx --yes html-validate identity.html || echo "⚠️ HTML warnings (non-blocking)"
+          fi
+
+      - name: Check Markdown links
+        run: |
+          npx --yes markdown-link-check README.md --quiet || echo "⚠️ Some links may be broken"
+
+      - name: Verify required files
+        run: |
+          MISSING=0
+          for f in README.md LICENSE .gitignore; do
+            if [ ! -f "$f" ]; then
+              echo "❌ Missing: $f"
+              MISSING=1
+            fi
+          done
+          if [ "$MISSING" -eq 1 ]; then exit 1; fi
+          echo "✅ All required files present"
