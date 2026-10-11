@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Ayman Elmasry — AEL Digital Studio" width="100%">
+<img src="assets/banner.png" alt="Ayman Elmasry — AEL Digital Studio" width="100%">
 
 <br>
 
