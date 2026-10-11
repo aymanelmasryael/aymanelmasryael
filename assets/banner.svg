@@ -1,4 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="80" height="80" aria-label="AEL Logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0074FF"/>
+      <stop offset="100%" stop-color="#6C47FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#bgGrad)"/>
+  <g opacity="0.05" stroke="#0074FF" stroke-width="0.5">
+    <line x1="0" y1="75" x2="1200" y2="75"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="150" y1="0" x2="150" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="450" y1="0" x2="450" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="750" y1="0" x2="750" y2="300"/>
+    <line x1="900" y1="0" x2="900" y2="300"/>
+    <line x1="1050" y1="0" x2="1050" y2="300"/>
+  </g>
+  <text x="600" y="150" font-family="Arial, sans-serif" font-size="48" fill="url(#blueGrad)" text-anchor="middle" dominant-baseline="middle">AEL Banner</text>
+</svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.77 226.77" width="80" height="80" aria-label="AEL Logo">
   <path d="m97.19,48.59v16.2h-32.4v-16.2c0-8.94-7.25-16.2-16.2-16.2s-16.2,7.25-16.2,16.2v16.2H0v-16.2c0-5.68.98-11.13,2.76-16.2C9.44,13.52,27.44,0,48.59,0s39.16,13.52,45.83,32.4c1.79,5.07,2.76,10.52,2.76,16.2Z" fill="#ffffff"></path>
   <rect y="97.19" width="32.4" height="32.4" fill="#0074FF"></rect>
   <rect x="64.79" y="97.19" width="32.4" height="32.4" fill="#0074FF"></rect>
