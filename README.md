@@ -21,11 +21,19 @@
 
 ## 🎯 About
 
-I define the vision behind digital products and orchestrate AI to bring that vision to life.
+I build digital products, web applications, and AI-powered systems by combining Web Development, AI, and structured design principles.
 
-Founder of **AEL Digital Studio** — designing brand systems, AI-powered experiences, and digital platforms where strategy, design, and technology work as a unified system.
+My work focuses on transforming ideas into functional digital solutions, reusable systems, and intelligent workflows.
 
-**Dubai · Egypt · Kuwait** — collaborating with clients worldwide to create distinctive brands, intelligent digital products, and long-term design systems.
+### Core Areas
+
+- Web Development & Web Applications
+- AI Systems & Generative AI
+- AI Agents & Automation
+- Prompt Engineering
+- Front-End Development
+- Design Systems & UI Architecture
+- Computational Design & Visual Systems
 
 ---
 
